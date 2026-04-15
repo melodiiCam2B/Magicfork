@@ -1,0 +1,8 @@
+/.haxelib
+/assets/base_game
+/assets/exclude
+/assets/secrets
+/source/unused
+.gitattributes
+/export/debug/windows/obj
+/export/release/html5
