@@ -4,11 +4,11 @@
 import backend.Discord;
 #end
 
-import split.*;
-import split.main.*;
-import split.utils.*;
-import split.menus.*;
-import split.objects.*;
+import magic.*;
+import magic.main.*;
+import magic.utils.*;
+import magic.menus.*;
+import magic.objects.*;
 
 
 //Psych

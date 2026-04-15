@@ -176,9 +176,20 @@ class HScript extends Iris
 		#end
 		set('ShaderFilter', openfl.filters.ShaderFilter);
 		set('StringTools', StringTools);
+		set('StringTools', magic.utils.ScriptedStateBase);
 		#if flxanimate
 		set('FlxAnimate', FlxAnimate);
 		#end
+
+		/* 
+			^ scripted state / substate functions for hscript
+		*/
+		set('ScriptedState', function(name:String) {
+			MusicBeatState.switchState(new ScriptedStateBase(name));
+		});
+		set('ScriptedSubState', function(name:String, value:Bool) {
+			MusicBeatState.switchSubState(name, value);
+		});
 
 		// Functions & Variables
 		set('setVar', function(name:String, value:Dynamic) {

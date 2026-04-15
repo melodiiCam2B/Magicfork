@@ -4,8 +4,8 @@ import flixel.FlxState;
 import backend.PsychCamera;
 
 class MusicBeatState extends FlxState extends SuperTrace {
-	private var softcoded:Bool = false;
-	var hscript:HScript;
+
+
 	private var curSection:Int = 0;
 	private var stepsToDo:Int = 0;
 
@@ -38,26 +38,26 @@ class MusicBeatState extends FlxState extends SuperTrace {
 		}
 		FlxTransitionableState.skipNextTransOut = false;
 		timePassedOnState = 0;
-
+		
 		if(Mods.currentModDirectory != null && Mods.currentModDirectory.trim().length > 0) {
-			var scriptPath:String = 'mods/${Mods.currentModDirectory}/data/${Type.getClass(FlxG.state)}.hx';
+			var scriptPath:String = 'mods/${Mods.currentModDirectory}/data/states/${stateName}.hx';
 			if(FileSystem.exists(scriptPath)) {
 				try {
 					hscript = new HScript(null, scriptPath);
-					softcoded = true;
 					callOnScripts('onCreate');
 				} catch(e:IrisError) {
 					var pos:HScriptInfos = cast {fileName: scriptPath, showLine: false};
 					Iris.error(Printer.errorToString(e, false), pos);
 					var hscript:HScript = cast (Iris.instances.get(scriptPath), HScript);
 				}
-				if(hscript != null) hscript.destroy();
-				hscript = null;
+				setUp_scripted();
 			}else{
 				print('$scriptName script [$scriptName] not found.');
 			}
 		}
 	}
+
+
 
 	public function initPsychCamera():PsychCamera {
 		var camera = new PsychCamera();
@@ -148,6 +148,11 @@ class MusicBeatState extends FlxState extends SuperTrace {
 		curStep = lastChange.stepTime + Math.floor(shit);
 	}
 
+	public static function switchSubState(name:String, shouldPause:Bool = false) {
+		persistentUpdate = persistentDraw = !shouldPause;
+		FlxG.state.openSubState(new ScriptedSubState(name));
+	}
+
 	public static function switchState(nextState:FlxState = null) {
 		if(nextState == null) nextState = FlxG.state;
 		if(nextState == FlxG.state) {
@@ -184,8 +189,6 @@ class MusicBeatState extends FlxState extends SuperTrace {
 	}
 
 	public function stepHit():Void {
-
-		
 		stagesFunc(function(stage:BaseStage) {
 			stage.curStep = curStep;
 			stage.curDecStep = curDecStep;
@@ -221,8 +224,7 @@ class MusicBeatState extends FlxState extends SuperTrace {
 		});
 	}
 
-	function stagesFunc(func:BaseStage->Void)
-	{
+	function stagesFunc(func:BaseStage->Void) {
 		for (stage in stages)
 			if(stage != null && stage.exists && stage.active)
 				func(stage);

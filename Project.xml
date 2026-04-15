@@ -3,21 +3,21 @@
 	<!-- _________________________ Application Settings _________________________ -->
 
 	<app 
-		title="Vs. Impostor: Split" 
-		file="Vs Impostor Split" 
-		packageName="com.wonder.spoon" 
-		package="com.wonder.spoon" 
+		title="Friday Night Finkin': Magicfork" 
+		file="Magicfork" 
+		packageName="com.fork.magic" 
+		package="com.fork.magic" 
 		main="Main" 
-		version="v1" 
-		company="wonderspoon" 
+		version="Alpha 0.1" 
+		company="Magicfork" 
 	/>
 
-	<assets path='art/icons/sussy.png' rename='icon.png' if="linux || mac" />
+	<assets path='art/icons/ico_OG.png' rename='icon.png' if="linux || mac" />
 	
-	<icon path="art/icons/sussy.png" size='16'/>
-	<icon path="art/icons/sussy.png" size='32'/>
-	<icon path="art/icons/sussy.png" size='64'/>
-	<icon path="art/icons/sussy.png" />
+	<icon path=".meta/ico_16.png" size='16' embed='true' />
+	<icon path=".meta/ico_32.png" size='32' embed='true' />
+	<icon path=".meta/ico_64.png" size='64' embed='true' />
+	<icon path=".meta/ico_OG.png" embed='true' />
 
 	<set name="APP_ID" value="0x0100f6c013bbc000" />
 

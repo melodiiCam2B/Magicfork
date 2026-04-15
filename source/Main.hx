@@ -155,9 +155,10 @@ class Main extends Sprite
 		ClientPrefs.loadDefaultKeys();
 		#if ACHIEVEMENTS_ALLOWED Achievements.load(); #end
 
-		var new_game = new MagicSpoon(game.width, game.height, game.initialState, game.framerate, game.framerate, true, game.startFullscreen);
-
-		addChild(new_game);
+		var app = new MagicSpoon(game.width, game.height, game.initialState, game.framerate, game.framerate, true, game.startFullscreen);
+		@:privateAccess
+		app._customSoundTray = magic.objects.SoundTray;
+		addChild(app);
 
 		#if !mobile
 		fpsVar = new FPSCounter(10, 3, 0xFFFFFF);

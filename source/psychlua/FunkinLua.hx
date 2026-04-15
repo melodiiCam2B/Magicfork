@@ -208,6 +208,16 @@ class FunkinLua {
 		// build target (windows, mac, linux, etc.)
 		set('buildTarget', LuaUtils.getBuildTarget());
 
+		/* 
+			^ scripted state / substate functions for lua
+		*/
+		Lua_helper.add_callback(lua, 'ScriptedState', function(name:String) {
+			MusicBeatState.switchState(new ScriptedStateBase(name));
+		});
+		Lua_helper.add_callback(lua, 'ScriptedSubState', function(name:String, value:Bool) {
+			MusicBeatState.switchSubState(name, value);
+		});
+
 		//
 		Lua_helper.add_callback(lua, "getRunningScripts", function() {
 			var runningScripts:Array<String> = [];

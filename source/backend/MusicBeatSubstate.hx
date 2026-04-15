@@ -2,11 +2,18 @@ package backend;
 
 import flixel.FlxSubState;
 
-class MusicBeatSubstate extends FlxSubState
+class SuperTrace {
+	public function print(print:String){
+		Sys.println(print);
+	}
+}
+
+class MusicBeatSubstate extends FlxSubState extends SuperTrace 
 {
 	public function new()
 	{
 		super();
+		print('Substate: ${Type.getClass(FlxG.state)} [${Date.now().toString()}]'.green());
 	}
 
 	private var curSection:Int = 0;

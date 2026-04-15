@@ -3,6 +3,7 @@ package backend;
 import openfl.utils.Assets;
 
 import haxe.Json;
+import haxe.DynamicAccess;
 
 typedef ModsList = {
 	enabled:Array<String>,
@@ -10,8 +11,21 @@ typedef ModsList = {
 	all:Array<String>
 };
 
-class Mods
-{
+typedef States = {
+	var title:String;
+	var main:String;
+	var story:String;
+	var freeplay:String;
+	var credits:String;
+	var options:String;
+	var settings:String;
+	// substates
+	var pause:String;
+	var startup:String;
+	var transition:String;
+};
+
+class Mods {
 	static public var currentModDirectory:String = '';
 	public static final ignoreModFolders:Array<String> = [
 		'characters',
@@ -30,6 +44,18 @@ class Mods
 		'scripts',
 		'achievements'
 	];
+
+	static public var modStates:Map<String, String> = [];
+	
+	public static function parseStates() {
+		#if MODS_ALLOWED
+		var path:String = Paths.mods('$currentModDirectory/data/states.json');
+		var rawData:MyData = Json.parse(path);
+		if(FileSystem.exists(path)) 
+			for (field in Reflect.fields(rawData)) 
+				myMap.set(field, Reflect.field(rawData, field));
+		#end
+	}
 
 	private static var globalMods:Array<String> = [];
 

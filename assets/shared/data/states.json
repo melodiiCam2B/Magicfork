@@ -1,0 +1,12 @@
+{	
+    "main": "MainMenuState",
+    "title": "TitleState",
+    "story": "StoryMode",
+    "credits": "Credits",
+    "options": "Options",
+    "settings": "Options",
+
+    "pause": "PauseSubState",
+    "startup": "FlashingSubState",
+    "transition": "Transitions"
+}
