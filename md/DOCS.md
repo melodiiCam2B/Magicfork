@@ -1,4 +1,3 @@
 
-# Documentation
-
-nothing here yet, wait a while please....
+# Magicfork Documentation
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/) [![Commits](https://img.shields.io/github/commit-activity/t/melodiiCam2B/Magicfork/main)](https://github.com/melodiiCam2B/Magicfork/commits/main/) ![GitHub contributors](https://img.shields.io/github/contributors/melodiiCam2B/Magicfork) ![GitHub Downloads (all assets, latest release)](https://img.shields.io/github/downloads/melodiiCam2B/Magicfork/latest/total) 
