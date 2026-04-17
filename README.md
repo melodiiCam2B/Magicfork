@@ -10,6 +10,8 @@ Magicfork is meant to be a userfriendly experience aimed at making it easy to ma
 > Keep in mind that this is being made a hand full of people so bugs are bound to happen
 > While I appriciate suggestions we do this for fun so you shouldn't expect yours to me implemented
 
+[API](https://github.com/melodiiCam2B/Magicfork/blob/main/md/API.md)
+[Documentation](https://github.com/melodiiCam2B/Magicfork/blob/main/md/DOCS.md)
 
 ## Credits
 
