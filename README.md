@@ -13,7 +13,7 @@ Magicfork is meant to be a userfriendly experience aimed at making it easy to ma
 
 ## Credits
 
-- Credits to [Tobi](https://github.com/melodiiCam2B) for coding all the new features
+- Credits to [Tobi](https://github.com/melodiiCam2B) for coding
 - Credits to [Itishe](https://x.com/BoringPerson32) for giving suggestions
 
 ## Libraries
