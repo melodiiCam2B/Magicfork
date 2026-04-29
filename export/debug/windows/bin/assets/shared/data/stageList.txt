@@ -1,9 +1,3 @@
-stage
-spooky
-philly
-limo
-mall
-mallEvil
-school
-schoolEvil
-tank
+version https://git-lfs.github.com/spec/v1
+oid sha256:f25704503df352b74fff82a1a12dd8301cd3be07320f30f25f1603b58309473f
+size 61

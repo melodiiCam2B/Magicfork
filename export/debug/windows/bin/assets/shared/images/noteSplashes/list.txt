@@ -1,4 +1,3 @@
-Diamond
-Electric
-Sparkles
-Vanilla
+version https://git-lfs.github.com/spec/v1
+oid sha256:efd23553641e361cbec5ee8e1c34618581e6cd0cc392ba5e60917b895d16aa81
+size 33

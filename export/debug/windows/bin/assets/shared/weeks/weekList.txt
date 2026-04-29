@@ -1,9 +1,3 @@
-tutorial
-week1
-week2
-week3
-week4
-week5
-week6
-week7
-weekend1
+version https://git-lfs.github.com/spec/v1
+oid sha256:8dc507156757982c64115d1ef86da98a12477ff2fd64b1d8990f68cc8d395d74
+size 59
