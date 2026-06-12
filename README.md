@@ -20,7 +20,7 @@ Magicfork is meant to be a userfriendly experience aimed at making it easy to ma
 - Credits to [Itishe](https://x.com/BoringPerson32) for giving suggestions
 
 ## Libraries
-- Credits to [Paopun20](https://github.com/Paopun20) for [Hython](https://github.com/Paopun20/Hython) from Paopun20
+- Credits to [Paopun20](https://github.com/Paopun20) for [Hython](https://github.com/Paopun20/Hython)
 - Credits to [akaFinn](https://github.com/akaFinn) for [flixel-modding](https://github.com/akaFinn/flixel-modding)
 - Credits to [MaybeMaru](https://github.com/MaybeMaru) for [Flixel-animate](https://github.com/MaybeMaru/flixel-animate) (Haxe Adobe Animate Atlas support)
 - Credits to [MAJigsaw77](https://github.com/MAJigsaw77) for [hxvlc](https://github.com/MAJigsaw77/hxvlc), [flxgif](https://github.com/MAJigsaw77/flxgif) and [hxdiscord_rpc](https://github.com/MAJigsaw77/hxdiscord_rpc)
