@@ -5,7 +5,9 @@
 [Home](https://github.com/melodiiCam2B/Magicfork) [API](https://github.com/melodiiCam2B/Magicfork/blob/main/md/API.md) [Documentation](https://github.com/melodiiCam2B/Magicfork/blob/main/md/DOCS.md)
 
 #
-A [Psych Engine](https://github.com/ShadowMario/FNF-PsychEngine) fork focused on QoL and modding 
+Magicfork is a [Psych Engine](https://github.com/ShadowMario/FNF-PsychEngine) fork focused on QoL and modding.
+It's main 'feature' is soft coded menus and the -planned- event revamp system, While not very technically impressive it's got interesting features you might not see in other places. 
+Magicfork isn't interested in competening with existing 'engines', nor will it ever be. it's just for those who want to use it.
 
 > [!NOTE]
 > Keep in mind that this is being made a hand full of people so bugs are bound to happen
