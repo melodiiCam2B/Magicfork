@@ -35,6 +35,8 @@
 -D grig.audio=0.0.5
 -cp D:/code/!._engines/Magicfork/.haxelib/tink_core/1,26,0/src
 -D tink_core=1.26.0
+-cp D:/code/!._engines/Magicfork/.haxelib/haxebanana/1,0,2/haxebanana
+-D haxebanana=1.0.2
 --macro hxcpp.debug.jsonrpc.Macro.injectServer()
 -cp D:/code/!._engines/Magicfork/.haxelib/hxcpp-debug-server/1,2,4
 -D hxcpp-debug-server=1.2.4
