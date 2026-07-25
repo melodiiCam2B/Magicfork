@@ -7,3 +7,5 @@
 /.haxelib
 /export
 vscode-project.hxml
+vscode-project.hxml
+*.hxml
