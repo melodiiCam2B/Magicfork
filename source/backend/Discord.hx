@@ -43,6 +43,8 @@ class DiscordClient
 	
 	private static function onReady(request:cpp.RawConstPointer<DiscordUser>):Void
 	{
+
+		
 		final user = cast (request[0].username, String);
 		final discriminator = cast (request[0].discriminator, String);
 

@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e59b1866ef2c9df02e7bc0fe88a04258343cf6f507a0787b4353f4f404c34067
-size 663
+{	
+    "states": {       
+        "main": "MainMenu",
+        "title": "TitleState",
+        "story": "StoryMode",
+        "credits": "CreditState",
+        "freeplay": "FreePlay",
+        "startup": "StartUp",
+
+        "optionsmain": "options",
+        "optionsgraphics": "options/Graphics",
+        "optionskeybinds": "options/Keybinds",
+        "optionsnotecolor": "options/Notecolor",
+        "optionsgameplay": "options/Gameplay",
+        "optionslanguage": "options/Language",
+        "optionsvisual": "options/Visual",
+
+        "pause": "PauseState",
+        "transition": "TransitionState",
+        "gameover": "GameOverState"
+    }
+}
