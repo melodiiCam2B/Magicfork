@@ -23,9 +23,7 @@ class Apps {
 
 			taskList.close();
 			readableList = '';
-		}
-		catch (e)
-		{
+		} catch (e) {
 			// If for some reason the game crashes when trying to run Process, just force OBS on
 			// in case this happens when they're streaming.
 			isOBS = true;

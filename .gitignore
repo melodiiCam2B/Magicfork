@@ -10,3 +10,5 @@ vscode-project.hxml
 vscode-project.hxml
 *.hxml
 /export
+/source/magic/dox
+/source/magic/dox
