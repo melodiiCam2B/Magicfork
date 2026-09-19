@@ -16,12 +16,12 @@ Magicfork is meant to be a userfriendly experience aimed at making it easy to ma
 
 ## Credits
 
-- Credits to [Tobi](https://github.com/melodiiCam2B) for coding
-- Credits to [Itishe](https://x.com/BoringPerson32) for giving suggestions
+- Credits to [X^2](https://github.com/melodiiCam2B) for coding
+- Credits to [Charlie](https://x.com/BoringPerson32) for giving suggestions, Testing
 
 ## Libraries
 - Credits to [Paopun20](https://github.com/Paopun20) for [Hython](https://github.com/Paopun20/Hython)
 - Credits to [akaFinn](https://github.com/akaFinn) for [flixel-modding](https://github.com/akaFinn/flixel-modding)
 - Credits to [MaybeMaru](https://github.com/MaybeMaru) for [Flixel-animate](https://github.com/MaybeMaru/flixel-animate) (Haxe Adobe Animate Atlas support)
-- Credits to [MAJigsaw77](https://github.com/MAJigsaw77) for [hxvlc](https://github.com/MAJigsaw77/hxvlc), [flxgif](https://github.com/MAJigsaw77/flxgif) and [hxdiscord_rpc](https://github.com/MAJigsaw77/hxdiscord_rpc)
+- Credits to [MAJigsaw77](https://github.com/MAJigsaw77) for [hxvlc](https://github.com/MAJigsaw77/hxvlc), [flxgif](https://github.com/MAJigsaw77/flxgif)
 - Credits to the [Funkin Crew](https://github.com/FunkinCrew) for [Friday Night Funkin'](https://github.com/FunkinCrew/funkin), [FlxPartialSound](https://github.com/FunkinCrew/FlxPartialSound), [grig.audio](https://github.com/FunkinCrew/grig.audio) and [funkin.vis](https://github.com/FunkinCrew/funkVis)
