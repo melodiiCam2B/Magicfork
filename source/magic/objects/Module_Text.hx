@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:aef7648fdeeaa3ff4b722b92a27a3954e403a29fd89ff917b0e1eb1cae8edc4f
-size 359
+package magic.objects;
+import lime.system.System;
+
+class Module_Text extends FlxText{
+    public function new(x:Float, y:Float, text:String, alpha:Float){
+        super(x, y);
+        this.text = text;
+		this.setFormat(Get.font('display'), 35, 0xffffffff);
+        this.y -= this.height;
+        updateHitbox();
+        this.alpha = alpha;
+    }
+}

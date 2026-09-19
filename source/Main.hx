@@ -101,7 +101,6 @@ class Main extends Sprite
 		Controls.instance = new Controls();
 		ClientPrefs.loadDefaultKeys();
 		Achievements.load();
-		TraceUtil.setup();
 
 		var app = new MagicSpoon(game.width, game.height, game.initialState, game.framerate, game.framerate, true, game.startFullscreen);
 		// @:privateAccess

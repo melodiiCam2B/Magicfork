@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a71810fc9254ce5b9ead8634dc8859e6acf040af28b3854ffb9c16a69b199366
-size 388
+package magic.handlers;
+
+import magic.handlers.Handler.Mode;
+import magic.handlers.Texture.Data;
+import haxe.ui.backend.flixel.CursorHelper;
+import lime.app.Future;
+import openfl.display.BitmapData;
+
+class Plugin extends FlxBasic {
+	public function new() {
+		super();
+		this.visible = false;
+	}
+	
+	override function update(elapsed:Float) {
+		super.update(elapsed);
+
+	}
+}

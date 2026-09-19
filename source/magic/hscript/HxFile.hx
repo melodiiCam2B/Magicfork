@@ -31,8 +31,6 @@ class HxFile extends Iris
 		set('tjson.TJSON', tjson.TJSON);
 		set('FlxRandom', flixel.math.FlxRandom);
 
-		set('FlxFlicker', flixel.effects.FlxFlicker);
-
 		set('Json', haxe.Json);
 		set('Assets', openfl.utils.Assets);
 		set('MathUtil', magic.utils.MathUtil);

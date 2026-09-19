@@ -3,8 +3,8 @@ package magic.utils;
 class NullState extends MusicBeatState {
 	public var acceptCallback:Void->Void;
 	public var backCallback:Void->Void;
-	public var errorMsg:String = 'It looks like the state you wanted to redirect to does not exist.
-        \npress SPACE to return to the intro screen';
+	public var errorMsg:String = 'it looks like the state you wanted to redirect too does not exist.
+        \npress SPACE to try again, or BACK to return to the intro screen';
 
 	public var errorSine:Float = 0;
 	public var errorText:FlxText;
@@ -29,7 +29,9 @@ class NullState extends MusicBeatState {
 		errorText.alpha = 1 - Math.sin((Math.PI * errorSine) / 180);
 
 		if(controls.ACCEPT)
-			MusicBeatState.switchState(new Intro());
+            MusicBeatState.switchState(new StateCheck(StateCheck.instance));
+		else if(controls.BACK)
+			MusicBeatState.switchState(new OneSplash());
 
 		super.update(elapsed);
 	}

@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:84697f728428b198c53b459af7023fb5d12a0a2455112576dd2c50c4c771ac73
-size 529
+package magic.launcher;
+
+class State extends FlxState{
+    public function new() {
+        super();
+
+        FlxG.autoPause = false;
+		FlxG.mouse.visible = true;
+		FlxG.fixedTimestep = false;
+		FlxG.mouse.useSystemCursor = true;
+		FlxG.game.focusLostFramerate = 60;
+		FlxG.keys.preventDefaultKeys = [TAB];
+		Lib.current.stage.window.borderless = true;
+		Lib.current.stage.window.resizable = false;
+    }
+    override function create() {
+        add(new Module_Dragbar(0, 0, FlxG.width, FlxG.height, 0));
+    }
+}

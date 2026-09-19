@@ -29,7 +29,6 @@ class ScriptedSubState extends MusicBeatSubstate{
 			}
 		}else{
 			print('$stateName script [ $scriptPath ] not found.'.blue());
-			close();
 		}
 
 		if(hscript != null) {

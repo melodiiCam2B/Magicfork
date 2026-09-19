@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:590f7c6f87e95f4b8374ea3ee68345f62a445b571009aafff891f78e269f9100
-size 556
+package magic.hscript;
+
+class LogText extends FlxText {
+	public var disableTime:Float = 6;
+	public function new() {
+		super(10, 10, FlxG.width - 20, '', 16);
+		setFormat(Paths.font("system.ttf"), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		scrollFactor.set();
+		borderSize = 1;
+	}
+
+	override function update(elapsed:Float) {
+		super.update(elapsed);
+		disableTime -= elapsed;
+		if(disableTime < 0) disableTime = 0;
+		if(disableTime < 1) alpha = disableTime;
+
+		if(alpha == 0 || y >= FlxG.height) kill();
+	}
+}

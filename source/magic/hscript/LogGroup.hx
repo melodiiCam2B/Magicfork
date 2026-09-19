@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:39f5975a9181bcbd668921ebe19f5d9d9890d330d148ea367d4299a79161f827
-size 656
+package magic.hscript;
+
+class LogGroup extends FlxGroup {
+	private var debug:FlxTypedGroup<LogText>;
+    public function new() {
+        super();
+		debug = new FlxTypedGroup<LogText>();
+		add(debug);
+		// add(new LogBar(clickEvent));
+    }
+
+	public function addLog(text:String, color:FlxColor) {
+		var newText = new LogText();
+		newText.text = text;
+		newText.color = color;
+		newText.disableTime = 6;
+		newText.alpha = 1;
+		newText.setPosition(10, 8 - newText.height);
+
+		debug.add(newText);
+	}
+
+	public function clickEvent():Void {
+        for ( i => added in debug.members ) 
+            added.visible = !added.visible;
+    }
+}

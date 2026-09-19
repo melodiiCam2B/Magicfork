@@ -1,5 +1,5 @@
 package magic.utils;
-import options.*;
+
 class ScriptedState extends MusicBeatState {
 	public var hscript:HScript = null;
 	public var stateName:String;
@@ -13,44 +13,22 @@ class ScriptedState extends MusicBeatState {
     public function new(name:String):Void{
 		state_id = name;
 		stateName = StateUtil.modStates.exists(name) ? StateUtil.modStates.get(name) : name;
-		super();
+		super(name);
 		instance = this;
 		StateUtil.instance = instance;
 	}
 	var fnfVer:FlxText;
 
-	public function redirect(sourceState:String) {
-		switch(sourceState) {
-			case 'null': MusicBeatState.switchState( new NullState() );
-			case 'title': MusicBeatState.switchState( new TitleState() );
-			case 'options': MusicBeatState.switchState( new OptionsState() );
-			case 'credits': MusicBeatState.switchState( new CreditsState() );
-			case 'freePlay': MusicBeatState.switchState( new StoryMenuState() );
-			case 'mainMenu': MusicBeatState.switchState( new MainMenuState() );
-			case 'storyMode': MusicBeatState.switchState( new StoryMenuState() );
-		}
-	}
-
-	public var report:FlxText = new FlxText(0, 0, FlxG.width / 1.5);
-
-	public var bg:FlxSprite;
-
     override function create() {
         persistentUpdate = persistentDraw = true;
 
-		bg = new FlxSprite(-80).loadGraphic(Paths.image('menuBlack'));
+		var bg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('menuBlack'));
 		bg.antialiasing = ClientPrefs.data.antialiasing;
 		bg.setGraphicSize(FlxG.width, FlxG.height);
 		bg.updateHitbox();
 		bg.screenCenter();
+		add(bg);
 		bg.alpha = 0.4;
-
-		report.text = "SOFTCODE MENU LOG\n\nIf you see this, please message \nPlease message [melodiicam2b.vbs] if this issue persists!";
-		report.setFormat(Paths.font('main.ttf'), 34, 0xFFFFFFFF, CENTER, OUTLINE, 0xFF000000);
-		report.screenCenter(XY);
-		report.borderSize = 1.5;
-		report.scrollFactor.set(0, 0);
-		add(report);
 
         super.create();
 
@@ -62,10 +40,8 @@ class ScriptedState extends MusicBeatState {
 				var pos:HScriptInfos = cast {fileName: scriptPath, showLine: false};
 				Iris.error(Printer.errorToString(e, false), pos);
 			}
-		} else {
-			print('$stateName script [ $scriptPath ] not found. redirecting to state'.blue());
-			try{redirect(state_id);}
-			catch(e){trace(e);}
+		}else{
+			print('$stateName script [ $scriptPath ] not found.'.blue());
 		}
 		
 		// if(hscript != null) setup_debug();
@@ -76,7 +52,7 @@ class ScriptedState extends MusicBeatState {
 			callOnScripts('create');
 		}
 
-		print('${Type.getClass(stateName)} as $stateName [${Date.now().toString()}]'.blue());
+		print('${Type.getClass(FlxG.state)} as $stateName [${Date.now().toString()}]'.blue());
 
 		fnfVer = new FlxText(12, FlxG.height - 24, 0, "Magicfork " + Application.current.meta.get('version'), 12);
 		fnfVer.scrollFactor.set();
@@ -127,7 +103,6 @@ class ScriptedState extends MusicBeatState {
 	}
 
 	function setUp_scripted() {
-		add(bg); // hides secondary error message
 		hscript.set('detailsShow', detailsShow);
 		hscript.set('controls', controls);
 		hscript.set('state', instance);

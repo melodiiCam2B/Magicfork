@@ -3,11 +3,13 @@ package backend;
 import flixel.FlxState;
 import backend.PsychCamera;
 
-class MusicBeatState extends FlxState {
-	public function print(print:String){
-		// trace(print);
+class MusicBeatState extends FlxState
+{
+	public function new(?name:String)
+	{
+		super();
+		print('${name} Entered State from: ${Type.getClass(FlxG.state)} [${Date.now().toString()}]'.green());
 	}
-	
 	private var curSection:Int = 0;
 	private var stepsToDo:Int = 0;
 
@@ -18,8 +20,9 @@ class MusicBeatState extends FlxState {
 	private var curDecBeat:Float = 0;
 	public var controls(get, never):Controls;
 	private function get_controls()
+	{
 		return Controls.instance;
-	
+	}
 
 	var _psychCameraInitialized:Bool = false;
 
@@ -132,7 +135,9 @@ class MusicBeatState extends FlxState {
 		curDecStep = lastChange.stepTime + shit;
 		curStep = lastChange.stepTime + Math.floor(shit);
 	}
-	
+	public function print(print:String){
+		Sys.println(print);
+	}
 
 	public static function switchSubState(name:String, shouldPause:Bool = false) {
 		// persistentUpdate = persistentDraw = !shouldPause;

@@ -1,11 +1,16 @@
 package backend;
 
 import flixel.FlxSubState;
-import backend.PsychCamera;
 
 class MusicBeatSubstate extends FlxSubState {
+
 	public function print(print:String){
-		// trace(print);
+		Sys.println(print);
+	}
+	public function new()
+	{
+		super();
+		print('Entered Substate from: ${Type.getClass(FlxG.state)} [${Date.now().toString()}]'.green());
 	}
 
 	private var curSection:Int = 0;
