@@ -35,6 +35,12 @@ class HxFile extends Iris
 		set('Assets', openfl.utils.Assets);
 		set('MathUtil', magic.utils.MathUtil);
 		set('Visualizer', magic.objects.Visualizer);
+
+		set('trace', function(name:String) {trace(name);});
+
+		// set('Visualizer', magic.sprites.SheetSprite);
+		// set('Visualizer', magic.sprites.VideoSprite);
+		
 		
 		set('toScriptedState', function(name:String) {
 			MusicBeatState.switchState(new ScriptedState(name));

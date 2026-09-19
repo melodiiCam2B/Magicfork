@@ -1973,7 +1973,7 @@ class PlayState extends MusicBeatState
 
 		#if DISCORD_ALLOWED
 		DiscordClient.changePresence("Chart Editor", null, null, true);
-		DiscordClient.resetClientID();
+		DiscordClient.resetClient();
 		#end
 
 		MusicBeatState.switchState(new ChartingState());
@@ -1993,7 +1993,7 @@ class PlayState extends MusicBeatState
 		if(opponentVocals != null)
 			opponentVocals.pause();
 
-		#if DISCORD_ALLOWED DiscordClient.resetClientID(); #end
+		#if DISCORD_ALLOWED DiscordClient.resetClient(); #end
 		MusicBeatState.switchState(new CharacterEditorState(SONG.player2));
 	}
 
@@ -2478,7 +2478,7 @@ class PlayState extends MusicBeatState
 				{
 					Mods.loadTopMod();
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));
-					#if DISCORD_ALLOWED DiscordClient.resetClientID(); #end
+					#if DISCORD_ALLOWED DiscordClient.resetClient(); #end
 
 					canResync = false;
 					MusicBeatState.switchState(new StoryMenuState());
@@ -2516,7 +2516,7 @@ class PlayState extends MusicBeatState
 			{
 				trace('WENT BACK TO FREEPLAY??');
 				Mods.loadTopMod();
-				#if DISCORD_ALLOWED DiscordClient.resetClientID(); #end
+				#if DISCORD_ALLOWED DiscordClient.resetClient(); #end
 
 				canResync = false;
 				MusicBeatState.switchState(new FreeplayState());

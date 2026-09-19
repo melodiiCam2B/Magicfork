@@ -123,7 +123,7 @@ class Main extends Sprite
 		FlxG.game.focusLostFramerate = 60;
 		FlxG.keys.preventDefaultKeys = [TAB];
 
-		DiscordClient.prepare();
+		DiscordClient.prepare(true);
 
 		// shader coords fix
 		FlxG.signals.gameResized.add(function (w, h) {
@@ -136,6 +136,10 @@ class Main extends Sprite
 		});
 
 		loadPlugins();
+
+		lime.app.Application.current.window.onClose.add(function() {
+			ClientPrefs.saveSettings();
+		});
 	}
 	public static function loadPlugins() {
 		FlxG.plugins.addPlugin(new PluginReload());

@@ -1,8 +1,7 @@
 #if !macro
 //Discord API
-#if DISCORD_ALLOWED
-import backend.Discord;
-#end
+import backend.discord.*;
+import backend.DiscordClient;
 
 import magic.*;
 import magic.main.*;

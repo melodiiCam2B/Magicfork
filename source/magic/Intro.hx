@@ -35,7 +35,7 @@ class Intro extends MusicBeatState {
             initiated = true;
         }
 
-        MusicBeatState.switchState(new ScriptedState('title'));
+        MusicBeatState.switchState(new StateCheck('title'));
         
     }
 }

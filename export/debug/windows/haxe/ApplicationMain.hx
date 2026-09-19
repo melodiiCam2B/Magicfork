@@ -35,7 +35,7 @@ class ApplicationMain
 		ManifestResources.init(config);
 		#end
 
-		app.meta["build"] = "30";
+		app.meta["build"] = "34";
 		app.meta["company"] = "magic.Ffrk";
 		app.meta["file"] = "Magicfork";
 		app.meta["name"] = "Friday Night Funkin': Magicfork";

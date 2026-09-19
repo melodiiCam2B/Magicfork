@@ -79,7 +79,14 @@ class MusicBeatState extends FlxState
 			}
 		}
 
-		if(FlxG.save.data != null) FlxG.save.data.fullscreen = FlxG.fullscreen;
+		if(FlxG.save.data != null) 
+			FlxG.save.data.fullscreen = FlxG.fullscreen;
+
+		if(FlxG.save.data.volume != null)
+			FlxG.save.data.volume = FlxG.sound.volume ;
+		
+		if (FlxG.save.data.mute != null)
+			FlxG.save.data.mute = FlxG.sound.muted;
 		
 		stagesFunc(function(stage:BaseStage) {
 			stage.update(elapsed);
